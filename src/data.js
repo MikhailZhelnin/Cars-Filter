@@ -1,0 +1,68 @@
+export const cars = [
+    {
+        id: 1,
+        type: "sportcar",
+        brand: "Lamborgini",
+        model: "Aventador",
+        doors: 2,
+        image: 'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_gw/aventador/2021/09_21_restyle/gw_aven_06.jpg',
+    },
+    {
+        id: 2,
+        type: "electric",
+        brand: "Tesla",
+        model: "Model X",
+        doors: 4,
+        image: 'https://cdn3.riastatic.com/photosnew/auto/photo/tesla_model-x__450010765fx.jpg',
+    },
+    {
+        id: 3,
+        type: "SUV",
+        brand: "Mercedes",
+        model: "G 63",
+        doors: 4,
+        image: 'https://img.mercedes-benz-kiev.com/data/lineup/g-class/new/mercedes-amg-g-63-14.jpg',
+    },
+    {
+        id: 4,
+        type: "sportcar",
+        brand: "Nissan",
+        model: "GTR",
+        doors: 2,
+        image: 'https://cdn.motor1.com/images/mgl/JJkj4/s1/nissan-gt-r-t-spec.webp',
+    },
+    {
+        id: 5,
+        type: "sportcar",
+        brand: "Bugatti",
+        model: "Chiron",
+        doors: 2,
+        image: 'https://cdn.motor1.com/images/mgl/6MGkl/s1/bugatti-chiron-pur-sport.jpg',
+    },
+    
+    {
+        id: 6,
+        type: "electric",
+        brand: "Tesla",
+        model: "Model 3",
+        doors: 4,
+        image: 'https://autogeek.com.ua/wp-content/uploads/2021/10/lhd-model-3-social_large.png',
+    },
+    {
+        id: 7,
+        type: "business",
+        brand: "BMW",
+        model: "5 series",
+        doors: 4,
+        image: 'https://cdn.motor1.com/images/mgl/jpZvR/s1/4x3/2021-bmw-5-series-debut.webp',
+    },
+    {
+        id: 8,
+        type: "SUV",
+        brand: "Toyota",
+        model: "Land Cruiser",
+        doors: 4,
+        image: 'https://cdn.motor1.com/images/mgl/R0lG3/s1/2022-toyota-land-cruiser.jpg',
+    },
+    
+]

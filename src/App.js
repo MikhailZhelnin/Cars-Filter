@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import FiltersList from './components/FiltersList';
+import CarsList from './components/CarsList';
+
+import { cars } from './data'
 
 function App() {
+
+  const [arrayOfCars] = React.useState(cars)
+  const [filteredCars, setFilteredCars] = React.useState(arrayOfCars)
+
+  const carsType = [...new Set(cars.map(car => car.type))]
+  const numberOfDoors = [...new Set(cars.map(car => car.doors))]
+
+  const [filteredCarsType, setFilteredCarsType] = React.useState(carsType[0])
+  const [filteredNumberOfDoors, setFilteredNumberOfDoors] = React.useState(numberOfDoors[0])
+
+  const filterCars = () => {
+    setFilteredCars(cars)
+    setFilteredCars(arrayOfCars.filter(cars => cars.type === filteredCarsType).filter(cars => cars.doors === +filteredNumberOfDoors))
+  }
+
+  const clearFilters = () => {
+    setFilteredCars(cars)
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FiltersList 
+        carsType={carsType} 
+        numberOfDoors={numberOfDoors} 
+        setFilteredCarsType={setFilteredCarsType} 
+        setFilteredNumberOfDoors={setFilteredNumberOfDoors}
+        filterCars={filterCars}
+        clearFilters={clearFilters}
+      />      
+
+      <CarsList filteredCars={filteredCars}/>
     </div>
   );
 }
